@@ -1,0 +1,113 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury) with Earthy twist",
+  "colors": {
+    "background": {
+      "primary": "#0A140F",
+      "secondary": "#11231A",
+      "tertiary": "#1D3627"
+    },
+    "text": {
+      "primary": "#F4F1ED",
+      "secondary": "#BDB1A3",
+      "accent": "#C5A059"
+    },
+    "brand": {
+      "dark_green": "#0A140F",
+      "olive_green": "#2A3F28",
+      "matte_gold": "#C5A059",
+      "earthy_brown": "#68523A"
+    },
+    "surfaces": {
+      "glass": "bg-[#11231A]/70 backdrop-blur-xl border border-[#C5A059]/20",
+      "card": "bg-[#11231A] border border-[#2A3F28]"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond, serif",
+      "body": "Outfit, sans-serif"
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl tracking-tighter leading-none",
+      "h2": "text-4xl md:text-5xl tracking-tight",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-base md:text-lg leading-relaxed text-[#BDB1A3]",
+      "label": "text-xs uppercase tracking-[0.2em] text-[#C5A059]"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous padding (p-8, p-12, p-24).",
+    "grid_system": "Bento Grid (Mode A) for cards and features. Asymmetrical layouts to build tension.",
+    "section_transitions": "Use diagonal geometric cuts using clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 calc(100% - 5vw)) to separate sections.",
+    "alignment": "Optical alignment, never center by default. Focus on tension and flow."
+  },
+  "motion_and_interactions": {
+    "scroll": "Lenis smooth scrolling is mandatory for premium momentum.",
+    "parallax": "Use framer-motion useScroll and useTransform for background and foreground image parallax.",
+    "hover": "Subtle scale up, gold border glow on cards. Gold text highlight on navigation.",
+    "entrance": "Staggered fade up with y-axis translate for lists and sections."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#C5A059] text-[#0A140F] hover:bg-[#D4AF37] font-semibold px-8 py-4 rounded-none border border-[#C5A059] transition-all flex items-center gap-2",
+      "secondary": "bg-transparent text-[#C5A059] border border-[#C5A059] hover:bg-[#C5A059]/10 px-8 py-4 rounded-none transition-all flex items-center gap-2"
+    },
+    "cards": {
+      "default": "p-8 bg-[#11231A] border border-[#2A3F28] hover:border-[#C5A059]/50 transition-colors duration-300"
+    }
+  },
+  "media": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_cultivares-nativa/artifacts/s0328tki_8B590799-5C8A-4B9F-AC65-794047CA71E7.png",
+      "description": "NATIVA gold onion emblem with transparent background"
+    },
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/7e81d906-68d9-4d08-b3aa-668c0ef60f66/images/1bf9b15d65b44bb61b698f6c91b360399fbba4fb1754352d93983579fdcfc676.png",
+      "description": "Cinematic wide-angle view of a lush onion field at golden hour, deep dark green and matte gold color palette"
+    },
+    "diagonal_texture": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/7e81d906-68d9-4d08-b3aa-668c0ef60f66/images/fbc440361d77ae8316b76ab955826ea215233af031f1fe57b5ac9b7bd94922a1.png",
+      "description": "Abstract elegant background with diagonal geometric cuts in deep forest green and matte gold textures"
+    },
+    "premium_onions": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/7e81d906-68d9-4d08-b3aa-668c0ef60f66/images/c8566267bc57de6635d81e4e8f71737b35c78cbea59e5c56f3f891d70ce0239b.png",
+      "description": "Close-up of premium red onions freshly harvested resting on rich dark soil"
+    },
+    "landscape_1": {
+      "url": "https://images.unsplash.com/photo-1720205066012-506914cac413?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxhZ3JpY3VsdHVyYWwlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBzdW5zZXR8ZW58MHx8fHwxNzc0OTc4OTM0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "A bird's eye view of a farm land"
+    },
+    "landscape_2": {
+      "url": "https://images.unsplash.com/photo-1763110803881-583dc935ca6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyYWwlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBzdW5zZXR8ZW58MHx8fHwxNzc0OTc4OTM0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Sunset over a vineyard with mountains in background"
+    },
+    "red_onion_1": {
+      "url": "https://images.unsplash.com/photo-1639172486437-28d0e1ce6493?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHw0fHxyZWQlMjBvbmlvbiUyMGhhcnZlc3QlMjBjbG9zZSUyMHVwfGVufDB8fHx8MTc3NDk3ODkzNXww&ixlib=rb-4.1.0&q=85",
+      "description": "a pile of red onions sitting on top of a wooden table"
+    }
+  },
+  "sections": {
+    "hero": "Parallax background using `hero_background`. Heavy overlay (bg-black/40) for text contrast. Large Cormorant Garamond heading. Subtext indicating premium seeds. Primary CTA to WhatsApp.",
+    "about": "Asymmetrical layout using `landscape_2` and `diagonal_texture`. Text highlighting technical authority, traceability, and tradition in agriculture.",
+    "process": "8 stages of the agricultural process. Use a timeline approach or Bento grid. Use horizontal scroll with framer-motion or staggered fade-ins.",
+    "differentials": "Bento grid layout. Cards with glassmorphism or dark green solid fills (`bg-[#11231A]`) and gold hover borders (`hover:border-[#C5A059]`). Phosphor icons in gold.",
+    "cultivars": "Showcase of 3 varieties: Nativa do Vale, Nativa da Serra, Nativa Planalto. Interactive tabs or a horizontal swipe carousel. Feature `premium_onions` and `red_onion_1`.",
+    "certification": "A strict, authoritative block. Earthy brown/dark olive accents, formal typography.",
+    "technical_notice": "High-contrast block (solid matte gold background with `#0A140F` text) or very dark with gold borders. Strict, clear information.",
+    "final_cta": "Diagonal cut background container. Large typography. Contact ONLY via WhatsApp and Instagram buttons (no form).",
+    "footer": "Darkest background (`#081710`). Clean links, gold logo, elegant copyright."
+  },
+  "instructions_to_main_agent": [
+    "Load fonts from Google Fonts in index.html: Cormorant Garamond (weights 300..700) and Outfit (weights 300..700).",
+    "Install `@phosphor-icons/react` for icons.",
+    "Install `@studio-freight/react-lenis` for smooth scrolling.",
+    "Install `framer-motion` for animations.",
+    "Code structure, component names, and variables MUST be in English. The actual copy/text visible to users MUST be in Portuguese.",
+    "Do NOT use HTML generic input/select components; strictly use WhatsApp and Instagram action buttons for contact.",
+    "Add `data-testid` attributes to all interactive elements.",
+    "Implement diagonal cuts between major sections using CSS `clip-path` or SVG overlays.",
+    "Adhere strictly to the dark green, olive, and matte gold palette. No neon or unrelated colors.",
+    "Ensure high contrast text over all images by applying gradients like `bg-gradient-to-t from-[#0A140F] to-transparent`."
+  ]
+}
