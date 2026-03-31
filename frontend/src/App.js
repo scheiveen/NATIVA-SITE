@@ -1,52 +1,44 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Layout
+import Navigation from "./components/layout/Navigation";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+// Sections
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Process from "./components/sections/Process";
+import Differentials from "./components/sections/Differentials";
+import Cultivars from "./components/sections/Cultivars";
+import Certification from "./components/sections/Certification";
+import TechnicalNotice from "./components/sections/TechnicalNotice";
+import FinalCTA from "./components/sections/FinalCTA";
+import Footer from "./components/sections/Footer";
 
+function App() {
   useEffect(() => {
-    helloWorldApi();
+    // Smooth scroll polyfill for older browsers
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="App bg-[#0A140F] min-h-screen" data-testid="app-container">
+      <Navigation />
+      <main>
+        <Hero />
+        <About />
+        <Process />
+        <Differentials />
+        <Cultivars />
+        <Certification />
+        <TechnicalNotice />
+        <FinalCTA />
+      </main>
+      <Footer />
     </div>
   );
 }
