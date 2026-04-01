@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { List, X } from '@phosphor-icons/react';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { List, X } from "@phosphor-icons/react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Início', id: 'inicio' },
-    { label: 'Sobre', id: 'sobre' },
-    { label: 'Processo', id: 'processo' },
-    { label: 'Cultivares', id: 'cultivares' },
-    { label: 'Certificação', id: 'certificacao' },
-    { label: 'Contato', id: 'contato' }
+    { label: "Início", id: "inicio" },
+    { label: "Sobre", id: "sobre" },
+    { label: "Processo", id: "processo" },
+    { label: "Cultivares", id: "cultivares" },
+    { label: "Certificação", id: "certificacao" },
+    { label: "Contato", id: "contato" },
   ];
 
   useEffect(() => {
@@ -20,14 +20,14 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
@@ -39,9 +39,9 @@ const Navigation = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-[#0A140F]/95 backdrop-blur-md border-b border-[#2A3F28]/50' 
-            : 'bg-transparent'
+          isScrolled
+            ? "bg-[#0A140F]/95 backdrop-blur-md border-b border-[#2A3F28]/50"
+            : "bg-transparent"
         }`}
         data-testid="navigation"
       >
@@ -49,12 +49,12 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <button
-              onClick={() => scrollToSection('inicio')}
+              onClick={() => scrollToSection("inicio")}
               className="flex items-center"
               data-testid="nav-logo"
             >
               <img
-                src="https://customer-assets.emergentagent.com/job_cultivares-nativa/artifacts/s0328tki_8B590799-5C8A-4B9F-AC65-794047CA71E7.png"
+                src="/img/logo-nativa-sem-fundo.png"
                 alt="NATIVA"
                 className="h-12 object-contain"
               />
@@ -76,7 +76,7 @@ const Navigation = () => {
 
             {/* CTA Button - Desktop */}
             <a
-              href="https://wa.me/5547999673232"
+              href="https://wa.me/5548999673232"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4AF37] text-[#0A140F] px-6 py-2.5 font-semibold text-sm transition-all duration-300"
@@ -101,14 +101,14 @@ const Navigation = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
             {/* Backdrop */}
-            <div 
+            <div
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             />
@@ -138,7 +138,7 @@ const Navigation = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  href="https://wa.me/5547999673232"
+                  href="https://wa.me/5548999673232"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 block w-full text-center bg-[#C5A059] hover:bg-[#D4AF37] text-[#0A140F] px-6 py-4 font-semibold transition-all duration-300"
