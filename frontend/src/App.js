@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "@/App.css";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Layout
 import Navigation from "./components/layout/Navigation";
@@ -39,6 +40,7 @@ function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
